@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: student-job-tracker-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://cachal2003:<db_password>@cluster0.rpldfs3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: PORT
+        value: 9012
