@@ -10,7 +10,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"));
 
-app.use("/api/jobs", require("./routes/jobRoutes"));
+app.use("/api/jobs", require("./routes"));
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
